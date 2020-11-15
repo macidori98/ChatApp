@@ -2,6 +2,7 @@ package com.example.chatapp.registration;
 
 import com.example.chatapp.R;
 import com.example.chatapp.databaseHelper.FirebaseDb;
+import com.example.chatapp.util.GlobalValues;
 import com.example.chatapp.util.Utils;
 
 public class RegistrationPresenter implements IRegistrationPresenter {
@@ -18,12 +19,12 @@ public class RegistrationPresenter implements IRegistrationPresenter {
             return;
         }
 
-        if (Utils.isValidStringLength(username, 6)) {
+        if (Utils.isValidStringLength(username, GlobalValues.STRING_MIN_LENGTH)) {
             this.onError(R.string.invalid_username);
             return;
         }
 
-        if (Utils.isValidStringLength(password, 6)) {
+        if (Utils.isValidStringLength(password, GlobalValues.STRING_MIN_LENGTH)) {
             this.onError(R.string.invalid_password);
             return;
         }

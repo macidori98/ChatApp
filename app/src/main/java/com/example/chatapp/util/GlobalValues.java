@@ -9,6 +9,8 @@ public class GlobalValues {
     public static final String IMAGE_URL = "imageURL";
     public static final String DEFAULT = "default";
 
+    public static final int STRING_MIN_LENGTH = 6;
+
 
     public static FirebaseUser CURRENT_USER;
 }

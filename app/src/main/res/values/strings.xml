@@ -9,10 +9,13 @@
     <string name="registration">Registration</string>
     <string name="back_button_press">Press again for exit</string>
 
+    <string name="login">Login</string>
+
     <!--Success-->
     <string name="registration_success">Registration successfully</string>
 
     <!--Errors-->
+    <string name="login_fail">Login failed. Check inserted data</string>
     <string name="user_create_fail">Failed: create user</string>
     <string name="invalid_email">Invalid email</string>
     <string name="invalid_username">Invalid username</string>

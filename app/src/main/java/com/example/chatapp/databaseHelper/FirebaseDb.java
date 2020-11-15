@@ -1,13 +1,10 @@
 package com.example.chatapp.databaseHelper;
 
-import androidx.annotation.NonNull;
 
 import com.example.chatapp.R;
+import com.example.chatapp.login.ILoginPresenter;
 import com.example.chatapp.registration.IRegistrationPresenter;
 import com.example.chatapp.util.GlobalValues;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -34,6 +31,16 @@ public class FirebaseDb {
         }
 
         return databaseInstance;
+    }
+
+    public void login(String email, String password, ILoginPresenter loginPresenter) {
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                loginPresenter.onSuccess();
+            } else {
+                loginPresenter.onError(R.string.login_fail);
+            }
+        });
     }
 
     public void createUser(String email, String password, String username, IRegistrationPresenter registrationPresenter) {

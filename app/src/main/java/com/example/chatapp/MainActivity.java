@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.chatapp.login.LoginFragment;
 import com.example.chatapp.registration.RegistrationFragment;
 import com.example.chatapp.util.FragmentNavigation;
 
@@ -13,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FragmentNavigation.getInstance(this).replaceFragment(new RegistrationFragment(), R.id.fragment_content);
+        FragmentNavigation.getInstance(this).replaceFragment(new LoginFragment(), R.id.fragment_content);
     }
 
     @Override

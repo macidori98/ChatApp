@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!--include
-        android:id="@+id/toolbar"
-        layout="@layout/bar_layout" /-->
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -33,18 +29,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/create_account"
+            android:text="@string/login"
             android:textSize="@dimen/sp20"
             android:textStyle="bold" />
-
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/username_materialEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
-            android:hint="@string/username"
-            android:inputType="text"
-            app:met_floatingLabel="normal" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/email_materialEditText"
@@ -63,6 +50,14 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             app:met_floatingLabel="normal" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="?colorPrimaryVariant"
+            android:text="@string/login" />
 
         <Button
             android:id="@+id/registration_button"
